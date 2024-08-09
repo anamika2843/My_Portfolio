@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamika - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Your existing CSS styles */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 237);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #8676c4;
+            height: 1.2px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .firstSection>div {
+            width: 40%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(159, 86, 227);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(159, 86, 227);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: auto;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 56px 0;
+        }
+
+        .skill {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .skill img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .skill-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .skill-desc {
+            font-size: 0.9rem;
+            color: gray;
+        }
+
+        .projectSection {
+            max-width: 80vw;
+            margin: auto;
+            height: auto;
+        }
+
+        .projectSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .project-box {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: gray;
+        }
+
+        .contactSection {
+            max-width: 80vw;
+            margin: auto;
+            height: auto;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .contactSection h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-option {
+            margin: 10px 20px;
+            text-align: center;
+        }
+
+        .contact-option a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .contact-option img {
+            width: 40px;
+        }
+
+        footer {
+            background-color: rgb(18, 18, 62);
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        footer ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin: 0 15px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            color: rgb(153, 153, 237);
+        }
+
+        footer p {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: gray;
+        }
+    </style>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Anamika's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('homeSection')">Home</a></li>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('aboutSection')">About</a></li>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('servicesSection')">Services</a></li>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('projectsSection')">Projects</a></li>
+                    <li><a href="javascript:void(0);" onclick="scrollToSection('contactSection')">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="homeSection" class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Anamika</span>
+                <div>and I am a passionate</div>
+                <div>Web Developer</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="https://drive.google.com/file/d/13CCGatcAP-zkHC18zDiilZjbHlbXvuT2/view?usp=sharing"><button class="btn">Download Resume</button></a>
+                    <a href="https://github.com/anamika2843"><button class="btn">Visit Github</button></a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section id="aboutSection" class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Skills Acquired</h1>
+            <div class="box">
+                <div class="skill">
+                    <img src="Logo\html.png" alt="HTML">
+                    <div class="skill-title">HTML</div>
+                    <div class="skill-desc">In HTML, I have learned to include semantic elements, multimedia integration, forms, accessibility best practices, and responsive design techniques.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\css.png" alt="CSS">
+                    <div class="skill-title">CSS</div>
+                    <div class="skill-desc">I have expertise in CSS, including Flexbox, Grid, animations, and responsive design, ensuring a visually appealing and user-friendly interface.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\javaScript.png" alt="JavaScript">
+                    <div class="skill-title">JavaScript</div>
+                    <div class="skill-desc">Proficient in JavaScript, I create dynamic, interactive web applications using ES6+ features, APIs, and frameworks like React.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\node js .png" alt="Node.js">
+                    <div class="skill-title">Node.js</div>
+                    <div class="skill-desc">Skilled in Node.js for backend development, building scalable, efficient server-side applications with Express and working with databases like MongoDB.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\React.png" alt="React">
+                    <div class="skill-title">React</div>
+                    <div class="skill-desc">Experienced in React, developing single-page applications with reusable components, state management using Redux, and hooks.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\Jquery.png" alt="jQuery">
+                    <div class="skill-title">jQuery</div>
+                    <div class="skill-desc">Proficient in jQuery for simplifying JavaScript coding, enhancing HTML documents, and creating dynamic web applications.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\express.png" alt="Express.js">
+                    <div class="skill-title">Express.js</div>
+                    <div class="skill-desc">Skilled in Express.js for building robust backend services and RESTful APIs, facilitating seamless communication between the frontend and backend.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\mysql.png" alt="MySQL">
+                    <div class="skill-title">MySQL</div>
+                    <div class="skill-desc">Experienced in MySQL for database management, performing complex queries, data manipulation, and ensuring data integrity in applications.</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="servicesSection" class="secondSection">
+            <h1>My Services</h1>
+            <div class="box">
+                <div class="skill">
+                    <img src="Logo\web-development.png" alt="Web Development">
+                    <div class="skill-title">Web Development</div>
+                    <div class="skill-desc">Building modern, responsive, and interactive websites using the latest technologies.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\unique-design.png" alt="Unique Design">
+                    <div class="skill-title">Unique Design</div>
+                    <div class="skill-desc">Creating visually appealing and user-friendly designs that stand out.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\database.png" alt="Make it Database">
+                    <div class="skill-title">Make it Database</div>
+                    <div class="skill-desc">Developing robust database solutions for efficient data management and retrieval.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\responsive.png" alt="Responsiveness">
+                    <div class="skill-title">Responsiveness</div>
+                    <div class="skill-desc">Ensuring websites look great and function well on all devices.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\testing.png" alt="Testing for Perfection">
+                    <div class="skill-title">Testing for Perfection</div>
+                    <div class="skill-desc">Conducting thorough testing to ensure error-free and high-performing websites.</div>
+                </div>
+                <div class="skill">
+                    <img src="Logo\simple-design.png" alt="Make it Simple">
+                    <div class="skill-title">Make it Simple</div>
+                    <div class="skill-desc">Creating intuitive and straightforward designs for an optimal user experience.</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="projectsSection" class="projectSection">
+            <h1>Projects</h1>
+            <div class="project-box">
+                <div class="project-title">BudgetBuddy</div>
+                <div class="project-desc">A finance tracker built using the MERN stack, helping users manage and track their expenses efficiently.</div>
+            </div>
+            <div class="project-box">
+                <div class="project-title">Health Navigator</div>
+                <div class="project-desc">A machine learning model predicting diseases from symptoms, improving diagnostic accuracy by 15%.</div>
+            </div>
+            <div class="project-box">
+                <div class="project-title">NewsFusion</div>
+                <div class="project-desc">A responsive news portal with a backend supporting over 10,000 articles, optimized search functionality, and a user-friendly interface.</div>
+            </div>
+        </section>
+        <hr>
+        <section id="contactSection" class="contactSection">
+            <h1>Contact Me</h1>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <img src="Logo\email.png" alt="Email">
+                    <a href="mailto:anamika.rp28@gmail.com">anamika.rp28@gmail.com</a>
+                </div>
+                <div class="contact-option">
+                    <img src="Logo\linkedin.png" alt="LinkedIn">
+                    <a href="https://www.linkedin.com/in/anamika-patil-838516260/">LinkedIn Profile</a>
+                </div>
+                <div class="contact-option">
+                    <img src="Logo\github.png" alt="GitHub">
+                    <a href="https://github.com/anamika2843">GitHub Profile</a>
+                </div>
+                <div class="contact-option">
+                    <img src="Logo\phone.png" alt="Phone">
+                    <a href="tel:+917338293108">(+91) 7338293108</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="/">Privacy Policy</a></li>
+            <li><a href="/">Terms of Service</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+        <p>&copy; 2024 Anamika. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
